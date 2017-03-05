@@ -1,0 +1,16 @@
+{
+    "name": "jens/design-patterns",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "Jens Bremmekamp",
+            "email": "jens@bremmekamp.com"
+        }
+    ],
+    "require": {
+        "php": "~7"
+    }
+}
