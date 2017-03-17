@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Jbr\DesignPatterns\Composite\Abstracted;
 
-
 abstract class Component
 {
     const ERR_UNKNOWN_CHILD = 1;
