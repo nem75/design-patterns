@@ -2,14 +2,28 @@
 
 declare -xr DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )
 
-cmd="$1"; shift
 composer=$(which composer || which composer.phar)
 phpunit="${DIR}/vendor/bin/phpunit"
 
+cmd="$1"
+shift
+
 case "${cmd}" in
-  install)  "${composer}" install --no-interaction ;;
-  tests)    "${phpunit}" --testsuite all ;;
+  install)  "${composer}" install --no-interaction "$@" ;;
+  tests)    "${phpunit}" --testsuite all "$@" ;;
 
   composer) "${composer}" "$@" ;;
   phpunit)  "${phpunit}" "$@" ;;
+
+  *)
+    cat <<-EOT
+    Usage: $0 [command] [additional options]
+
+    Available commands:
+      install
+      tests
+      composer
+      phpunit
+EOT
+    ;;
 esac
