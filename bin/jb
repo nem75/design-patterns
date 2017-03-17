@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+declare -xr DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )
+
+cmd="$1"; shift
+composer=$(which composer || which composer.phar)
+phpunit="${DIR}/vendor/bin/phpunit"
+
+case "${cmd}" in
+  install)  "${composer}" install --no-interaction ;;
+  tests)    "${phpunit}" --testsuite all ;;
+
+  composer) "${composer}" "$@" ;;
+  phpunit)  "${phpunit}" "$@" ;;
+esac
