@@ -9,10 +9,10 @@ cmd="$1"
 shift
 
 case "${cmd}" in
-  install)  "${composer}" install --no-interaction "$@" ;;
+  install)  "${composer}" --ansi install --no-interaction "$@" ;;
   tests)    "${phpunit}" --testsuite all "$@" ;;
 
-  composer) "${composer}" "$@" ;;
+  composer) "${composer}" --ansi "$@" ;;
   phpunit)  "${phpunit}" "$@" ;;
 
   *)

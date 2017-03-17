@@ -17,5 +17,8 @@
         "psr-4": {
             "Jbr\\DesignPatterns\\": "src/"
         }
+    },
+    "config": {
+        "bin-dir": "bin"
     }
 }
