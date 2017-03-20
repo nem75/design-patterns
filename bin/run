@@ -2,18 +2,18 @@
 
 declare -xr DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )
 
-composer=$(which composer || which composer.phar)
-phpunit="${DIR}/vendor/bin/phpunit"
+composer="$(which composer || which composer.phar) --ansi"
+phpunit="${DIR}/vendor/bin/phpunit --colors=always"
 
 cmd="$1"
 shift
 
 case "${cmd}" in
-  install)  "${composer}" --ansi install --no-interaction "$@" ;;
-  tests)    "${phpunit}" --testsuite all "$@" ;;
+  install)  ${composer} install --no-interaction "$@" ;;
+  tests)    ${phpunit} --testsuite all "$@" ;;
 
-  composer) "${composer}" --ansi "$@" ;;
-  phpunit)  "${phpunit}" "$@" ;;
+  composer) ${composer} "$@" ;;
+  phpunit)  ${phpunit} "$@" ;;
 
   *)
     cat <<-EOT
