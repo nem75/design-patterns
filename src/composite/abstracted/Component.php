@@ -1,7 +1,8 @@
 <?php
+
 declare(strict_types=1);
 
-namespace Jbr\DesignPatterns\Composite\Abstracted;
+namespace App\Composite\Abstracted;
 
 abstract class Component
 {

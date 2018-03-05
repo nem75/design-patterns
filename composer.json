@@ -1,24 +1,24 @@
 {
     "name": "jens/design-patterns",
     "type": "project",
-    "require-dev": {
-        "phpunit/phpunit": "^6.0"
-    },
     "authors": [
         {
             "name": "Jens Bremmekamp",
             "email": "jens@bremmekamp.com"
         }
     ],
-    "require": {
-        "php": "~7.1"
-    },
     "autoload": {
         "psr-4": {
-            "Jbr\\DesignPatterns\\": "src/"
+            "App\\": "src/"
         }
     },
     "config": {
         "bin-dir": "bin"
+    },
+    "require": {
+        "php": "~7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
     }
 }

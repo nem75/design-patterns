@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-use Jbr\DesignPatterns\Composite\Abstracted as C;
+use App\Composite\Abstracted as C;
 
 class CompositeAbstractedTests extends TestCase
 {

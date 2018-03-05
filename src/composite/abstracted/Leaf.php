@@ -1,9 +1,10 @@
 <?php
+
 declare(strict_types=1);
 
-namespace Jbr\DesignPatterns\Composite\Abstracted;
+namespace App\Composite\Abstracted;
 
-use Jbr\DesignPatterns\Composite\Abstracted\Component;
+use App\Composite\Abstracted\Component;
 use RuntimeException;
 
 class Leaf extends Component
